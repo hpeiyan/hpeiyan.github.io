@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="命名实体识别(NER)">
+        <meta property="og:title" content="序列标注任务">
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>命名实体识别(NER) - 大雁</title>
+    <title>序列标注任务 - 大雁</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -112,7 +112,7 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">命名实体识别(NER)</h1>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">序列标注任务</h1>
             <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-07-31</p>
         </div>
     </div>
@@ -133,51 +133,31 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/命名实体识别/">#命名实体识别</a>
+                                <a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/序列标注任务/">#序列标注任务</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p>命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。</p>
-<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><p><img src="./1564543099923.png" alt="Alt text"></p>
-<p><img src="./1564539005961.png" alt="Alt text"></p>
-<p><strong>有监督的学习方法</strong>：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等。值得一提的是，<code>基于条件随机场</code>的方法是命名实体识别中最成功的方法。</p>
-<p><strong>半监督的学习方法</strong>：这一类方法利用标注的小数据集（种子数据）<code>自举学习</code>。</p>
-<p><strong>无监督的学习方法</strong>：这一类方法利用词汇资源（如WordNet）等进行上下文聚类。</p>
-<p><strong>混合方法</strong>：几种模型相结合或利用统计方法和人工总结的知识库。</p>
-<p>值得一提的是，由于深度学习在自然语言的广泛应用，基于深度学习的命名实体识别方法也展现出不错的效果，此类方法基本还是把命名实体识别<code>当做序列标注任务</code>来做，比较经典的方法是LSTM+CRF、BiLSTM+CRF。</p>
-<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><img src="./1564539204383.png" alt="Alt text"></p>
-<h3 id="4-工具包"><a href="#4-工具包" class="headerlink" title="4. 工具包"></a>4. 工具包</h3><p><img src="./1564539148720.png" alt="Alt text"></p>
-<h3 id="5-实战应用"><a href="#5-实战应用" class="headerlink" title="5. 实战应用"></a>5. 实战应用</h3><h4 id="5-1-使用预训练模型"><a href="#5-1-使用预训练模型" class="headerlink" title="5.1 使用预训练模型"></a>5.1 使用预训练模型</h4><p>很多工具包有提供已经训练好的NER模型，可以直接使用。</p>
-<h4 id="5-2-训练自己的NER模型"><a href="#5-2-训练自己的NER模型" class="headerlink" title="5.2 训练自己的NER模型"></a>5.2 训练自己的NER模型</h4><h5 id="5-2-1-有监督的学习方法"><a href="#5-2-1-有监督的学习方法" class="headerlink" title="5.2.1 有监督的学习方法"></a>5.2.1 有监督的学习方法</h5><p><strong>1）语料准备</strong><br>可以查找公开的数据集，或者自己人工标记语料，人工标记流程如下：</p>
-<ol>
-<li><p>定义实体类别，比如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">time: 时间</span><br><span class="line">location: 地点</span><br><span class="line">person_name: 人名</span><br><span class="line">org_name: 组织名</span><br><span class="line">company_name: 公司名</span><br><span class="line">product_name: 产品名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>收集语料</p>
-</li>
-<li><p>人工标记实体</p>
-</li>
+                    <h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>序列标注任务是中文自然语言处理（NLP）领域在句子层面中的主要任务，输入是一个序列，他的输出也是一个序列。</p>
+<h3 id="2-子任务"><a href="#2-子任务" class="headerlink" title="2. 子任务"></a>2. 子任务</h3><ol>
+<li>分词</li>
+<li>词性标注</li>
+<li>命名实体识别</li>
+<li>关系抽取</li>
+<li>…</li>
 </ol>
-<p><strong>2）数据增强（Optional）</strong><br>对原语料进行分句，然后随机地对各个句子进行bigram、trigram拼接，最后与原始句子一起作为训练语料。</p>
-<p><strong>3）模型训练</strong></p>
-<ol>
-<li>传统机器学习：隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等，推荐条件随机场。</li>
-<li>深度学习：BiLSTM-CRF、IDCNN-CRF</li>
-</ol>
-<h5 id="5-2-2-半监督的学习方法"><a href="#5-2-2-半监督的学习方法" class="headerlink" title="5.2.2 半监督的学习方法"></a>5.2.2 半监督的学习方法</h5><h5 id="5-2-3-无监督的学习方法"><a href="#5-2-3-无监督的学习方法" class="headerlink" title="5.2.3 无监督的学习方法"></a>5.2.3 无监督的学习方法</h5><h3 id="6-Reference"><a href="#6-Reference" class="headerlink" title="6. Reference"></a>6. Reference</h3><ol>
-<li><a href="https://easyai.tech/ai-definition/ner/" target="_blank" rel="noopener">命名实体识别 – Named-entity recognition | NER</a> <em>NER整体框架概括比较全面</em></li>
-<li><a href="https://www.jiqizhixin.com/articles/2018-08-31-2" target="_blank" rel="noopener">一文详解深度学习在命名实体识别(NER)中的应用</a> <em>深度学习算法讲的细致</em></li>
-<li><a href="https://blog.csdn.net/buppt/article/details/81180361" target="_blank" rel="noopener">零基础入门–中文命名实体识别（BiLSTM+CRF模型，含代码）</a><em>BiLSTM+CRF模型的落地代码</em></li>
-<li><a href="https://www.jianshu.com/p/16e1f6a7aaef" target="_blank" rel="noopener">NLP入门（四）命名实体识别（NER）</a><em>NLTK和Stanford NLP工具包使用</em></li>
+<h3 id="3-涉及算法"><a href="#3-涉及算法" class="headerlink" title="3. 涉及算法"></a>3. 涉及算法</h3><h4 id="3-1-传统机器学习"><a href="#3-1-传统机器学习" class="headerlink" title="3.1 传统机器学习"></a>3.1 传统机器学习</h4><h5 id="HMM（隐马尔科夫模型）"><a href="#HMM（隐马尔科夫模型）" class="headerlink" title="HMM（隐马尔科夫模型）"></a>HMM（隐马尔科夫模型）</h5><h5 id="CRF（条件随机场）"><a href="#CRF（条件随机场）" class="headerlink" title="CRF（条件随机场）"></a>CRF（条件随机场）</h5><h4 id="3-2-深度学习"><a href="#3-2-深度学习" class="headerlink" title="3.2 深度学习"></a>3.2 深度学习</h4><h5 id="Bi-LSTM-CRF"><a href="#Bi-LSTM-CRF" class="headerlink" title="Bi-LSTM CRF"></a>Bi-LSTM CRF</h5><h3 id="4-Reference"><a href="#4-Reference" class="headerlink" title="4. Reference"></a>4. Reference</h3><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/35620631" target="_blank" rel="noopener">序列标注任务的常见套路</a><em>算法解析</em></li>
+<li><a href="https://blog.csdn.net/dugudaibo/article/details/79120627" target="_blank" rel="noopener">结构学习：序列标注</a><em>算法解析</em></li>
+<li><a href="https://www.jiqizhixin.com/articles/2018-10-30-7" target="_blank" rel="noopener">深度学习模型在序列标注任务中的应用</a><em>深度学习算法解析</em></li>
 </ol>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/命名实体识别/">#命名实体识别</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/序列标注任务/">#序列标注任务</a>
                         </div>
                     
 
@@ -206,22 +186,6 @@
                     <hr class="dn-l mw4 black-50 mt5" />
                     
                     <!-- Widget 2: Categories -->
-                    
-                        <div class="mt5 tc tl-l">
-    <h3>Categories</h3>
-    
-        <p>
-            <a href="/categories/nlp/">nlp</a>
-        </p>
-    
-        <p>
-            <a href="/categories/nlp/ml/">ml</a>
-        </p>
-    
-</div>
-
-
-                        <hr class="dn-l mw4 black-50 mt5" />
                     
 
                     <!-- Widget 3: Recent Posts -->
