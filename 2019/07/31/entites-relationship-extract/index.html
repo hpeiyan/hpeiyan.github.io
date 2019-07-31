@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="实体关系抽取[TOC]
+1. 概述信息抽取旨在从大规模非结构或半结构的自然语言文本中抽取结构化信息。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。
+2. 关系抽取方法2.1 基于规则匹配比如，对于IS-A这样的关系，我们可以使用如下的规则进行抽取：
+123456">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="实体关系抽取">
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>实体关系抽取 - Hexo</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Hexo">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Hexo">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">实体关系抽取</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-07-31</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/机器学习/">#机器学习</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="实体关系抽取"><a href="#实体关系抽取" class="headerlink" title="实体关系抽取"></a>实体关系抽取</h2><p>[TOC]</p>
+<h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>信息抽取旨在从大规模非结构或半结构的自然语言文本中<code>抽取结构化信息</code>。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。</p>
+<h3 id="2-关系抽取方法"><a href="#2-关系抽取方法" class="headerlink" title="2. 关系抽取方法"></a>2. 关系抽取方法</h3><h4 id="2-1-基于规则匹配"><a href="#2-1-基于规则匹配" class="headerlink" title="2.1 基于规则匹配"></a>2.1 基于规则匹配</h4><p>比如，对于<code>IS-A</code>这样的关系，我们可以使用如下的规则进行抽取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">“Y such as X ((, X)* (, and|or) X)”!</span><br><span class="line">“such Y as X”!</span><br><span class="line">“X or other Y”!</span><br><span class="line">“X and other Y”!</span><br><span class="line">“Y including X”!</span><br><span class="line">“Y, especially X”!</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-基于监督学习的方法"><a href="#2-2-基于监督学习的方法" class="headerlink" title="2.2 基于监督学习的方法"></a>2.2 基于监督学习的方法</h4><p>我们可以把关系抽取当成一个<code>多分类问题</code>，每一种关系都是一个类别，通过对标签数据的学习训练出一个分类器（classifier）即可。</p>
+<p><strong>流程</strong>：</p>
+<ul>
+<li>预先定义好想提取的关系集合</li>
+<li>选择相关的命名实体集合</li>
+<li>寻找并<code>标注数据</code></li>
+<li>选择有代表性的语料库</li>
+<li>标记命名实体</li>
+<li><code>人工标注实体间的关系</code></li>
+<li>分成训练、开发、测试集</li>
+<li>设计特征</li>
+<li>选择并训练分类器</li>
+<li>评估结果</li>
+</ul>
+<p>为了提高 efficiency，通常我们会训练<code>两个分类器</code>，第一个分类器是 yes/no 的二分类，判断命名实体间是否有关系，如果有关系，再送到第二个分类器，给实体分配关系类别。这样做的好处是通过排除大多数的实体对来加快分类器的训练过程，另一方面，对每个任务可以使用 task-specific feature-set。</p>
+<p><strong>要解决的难点</strong>：<br>1）特征构建<br>传统的基于机器学习的方法会使用一些NLP技术构建<code>组合特征</code>，比如词性标注，依存分析等。<br>2）标签数据的获取<br>监督学习的效果直接取决于训练数据集的大小和质量，但是获得大量的标注数据的代价是非常昂贵的。那么如何解决这个问题呢？我们可以<code>通过远程监督学习</code>（distant supervision）的方法，从已有信息里得到大量的标签数据。</p>
+<h4 id="2-3-基于半监督的方法"><a href="#2-3-基于半监督的方法" class="headerlink" title="2.3 基于半监督的方法"></a>2.3 基于半监督的方法</h4><p>1）基于种子的启发式算法（Bootstrapping）<br><strong>基本的思路</strong>：</p>
+<ol>
+<li>我们先准备一些准确率很高的<code>实体-关系种子集</code>，比如：Jack Ma/Alibaba/Founder-of这种</li>
+<li>以这些种子实例为基础，去语料库里找出所有相关的句子</li>
+<li>对这些句子的上下文进行分析，找出一些可靠的pattern</li>
+<li>然后再通过这些pattern去发现更多的实例</li>
+<li>通过新的实例再去发掘出新的pattern，如此往复，直到收敛<br>整个过程像滚雪球一样，越滚越大…</li>
+</ol>
+<p>2）🌟<code>远程监督学习</code>（Distant Supervision）</p>
+<p>通过远程监督学习获取了大量的标签数据之后，使用传统机器学习的方法进行训练分类器。</p>
+<p><strong>一个假设前提</strong>：<br>如果两个实体存在关联关系，那么语料库中涉及到这两个实体的地方，都将指向这样的关系。</p>
+<p><strong>存在的问题</strong>：</p>
+<ol>
+<li>假设前提的前提可能不成立；</li>
+<li>基于手动的特征工程效率不高；</li>
+</ol>
+<p><strong>改进</strong>：<br>现在取得state-of-the-art效果的方法基本都是基于远程监督学习的，而且他们的工作都是为了解决以上两个问题。</p>
+<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><strong>英文</strong></p>
+<ol>
+<li>ACE 2005: 599 docs. 7 types;</li>
+<li>SemiEval 2010 Task8 Dataset:</li>
+<li>NYT+FreeBase 通过Distant Supervised method 提取，里面会有噪音数据</li>
+<li>fewrel基于Wiki的数据集，<a href="https://thunlp.github.io/fewrel.html" target="_blank" rel="noopener">https://thunlp.github.io/fewrel.html</a></li>
+</ol>
+<p><strong>中文</strong></p>
+<ol>
+<li>open_data.zip (519.1 MB)<br><a href="https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q</a><br>密码：8gd2</li>
+<li><a href="https://www.biendata.com/competition/ccks_2019_ipre/" target="_blank" rel="noopener">https://www.biendata.com/competition/ccks_2019_ipre/</a><br>CCKS2019的一项比赛，人物关系抽取，给了数据集</li>
+</ol>
+<h3 id="4-算法模型"><a href="#4-算法模型" class="headerlink" title="4. 算法模型"></a>4. 算法模型</h3><h4 id="4-1-基于监督算法"><a href="#4-1-基于监督算法" class="headerlink" title="4.1 基于监督算法"></a>4.1 基于监督算法</h4><p>1）<strong>模型</strong>：<br>BiLSTM+attention模型<br>2）<strong>特征</strong>：<br>词向量+位置向量</p>
+<h3 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5 Reference"></a>5 Reference</h3><ol>
+<li><a href="http://www.shuang0420.com/2018/09/15/%E7%9F%A5%E8%AF%86%E6%8A%BD%E5%8F%96-%E5%AE%9E%E4%BD%93%E5%8F%8A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" target="_blank" rel="noopener">知识抽取-实体及关系抽取</a><em>（实体识别和关系抽取的概述和算法都涉及，推荐）</em></li>
+<li><a href="https://blog.csdn.net/buppt/article/details/82961979" target="_blank" rel="noopener">零基础入门–中文实体关系抽取（BiLSTM+attention，含代码）</a><em>（有监督抽取关系，代码）</em></li>
+<li><a href="https://shomy.top/2018/02/28/relation-extraction/#fully-supervised-learning" target="_blank" rel="noopener">关系抽取(分类)总结</a><em>（深度学习在关系抽取的算法介绍）</em></li>
+<li><a href="http://www.fanyeong.com/2018/08/11/relation-extration-overview/" target="_blank" rel="noopener">关系抽取综述</a><em>（综述，深度学习部分算法涉及）</em></li>
+</ol>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/自然语言处理/">#自然语言处理</a> <a class="fw3 ph1 dib" href="/tags/机器学习/">#机器学习</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="John Doe">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/nlp/">nlp</a>
+        </p>
+    
+        <p>
+            <a href="/categories/nlp/ml/">ml</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2019/07/31/entites-relationship-extract/">实体关系抽取</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
