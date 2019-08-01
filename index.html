@@ -1,225 +1,864 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
-<head><meta name="generator" content="Hexo 3.9.0">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Description-->
-    
-        <meta name="description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
-    
 
-    <!--Author-->
-    
-        <meta name="author" content="大雁">
-    
 
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="大雁">
-    
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
 
-    <!--Open Graph Description-->
-    
-        <meta property="og:description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
-    
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
 
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="大雁">
 
-    <!--Type page-->
-    
-        <meta property="og:type" content="website">
-    
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-    <!--Page Cover-->
-    
 
-    <meta name="twitter:card" content="summary">
-    
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    search: {
+      root: '/',
+      path: ''
+    },
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
 
-    <!-- Title -->
-    
-    <title>大雁</title>
+  <meta name="description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+<meta property="og:type" content="website">
+<meta property="og:title" content="大雁">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="大雁">
+<meta property="og:description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="大雁">
+<meta name="twitter:description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+  <link rel="canonical" href="http://yoursite.com/">
 
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
 
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <title>大雁</title>
+  
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
 
-    <!-- Google Analytics -->
-    
 
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-<body>
+  <div class="container sidebar-position-left page-home">
+    <div class="headband"></div>
 
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">大雁</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+      
     
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="大雁">
-            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="大雁">
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+    </ul>
+</nav>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/sequence-mark/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大雁">
+      <meta itemprop="description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大雁">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/31/sequence-mark/" class="post-title-link" itemprop="url">序列标注任务</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-31 21:47:18 / 修改时间：21:49:42" itemprop="dateCreated datePublished" datetime="2019-07-31T21:47:18+08:00">2019-07-31</time>
+            </span>
+          
+            
+
+            
+          
+
+          <br>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">217</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>序列标注任务是中文自然语言处理（NLP）领域在句子层面中的主要任务，输入是一个序列，他的输出也是一个序列。</p>
+<h3 id="2-子任务"><a href="#2-子任务" class="headerlink" title="2. 子任务"></a>2. 子任务</h3><ol>
+<li>分词</li>
+<li>词性标注</li>
+<li>命名实体识别</li>
+<li>关系抽取</li>
+<li>…</li>
+</ol>
+<h3 id="3-涉及算法"><a href="#3-涉及算法" class="headerlink" title="3. 涉及算法"></a>3. 涉及算法</h3><h4 id="3-1-传统机器学习"><a href="#3-1-传统机器学习" class="headerlink" title="3.1 传统机器学习"></a>3.1 传统机器学习</h4><h5 id="HMM（隐马尔科夫模型）"><a href="#HMM（隐马尔科夫模型）" class="headerlink" title="HMM（隐马尔科夫模型）"></a>HMM（隐马尔科夫模型）</h5><h5 id="CRF（条件随机场）"><a href="#CRF（条件随机场）" class="headerlink" title="CRF（条件随机场）"></a>CRF（条件随机场）</h5><h4 id="3-2-深度学习"><a href="#3-2-深度学习" class="headerlink" title="3.2 深度学习"></a>3.2 深度学习</h4><h5 id="Bi-LSTM-CRF"><a href="#Bi-LSTM-CRF" class="headerlink" title="Bi-LSTM CRF"></a>Bi-LSTM CRF</h5><h3 id="4-Reference"><a href="#4-Reference" class="headerlink" title="4. Reference"></a>4. Reference</h3><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/35620631" target="_blank" rel="noopener">序列标注任务的常见套路</a><em>算法解析</em></li>
+<li><a href="https://blog.csdn.net/dugudaibo/article/details/79120627" target="_blank" rel="noopener">结构学习：序列标注</a><em>算法解析</em></li>
+<li><a href="https://www.jiqizhixin.com/articles/2018-10-30-7" target="_blank" rel="noopener">深度学习模型在序列标注任务中的应用</a><em>深度学习算法解析</em></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/NER/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大雁">
+      <meta itemprop="description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大雁">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/31/NER/" class="post-title-link" itemprop="url">命名实体识别(NER)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-31 21:23:10 / 修改时间：21:25:53" itemprop="dateCreated datePublished" datetime="2019-07-31T21:23:10+08:00">2019-07-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nlp/" itemprop="url" rel="index"><span itemprop="name">nlp</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nlp/ml/" itemprop="url" rel="index"><span itemprop="name">ml</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.1k</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">1 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p>命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><p><img src="./1564543099923.png" alt="Alt text"></p>
+<p><img src="./1564539005961.png" alt="Alt text"></p>
+<p><strong>有监督的学习方法</strong>：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等。值得一提的是，<code>基于条件随机场</code>的方法是命名实体识别中最成功的方法。</p>
+<p><strong>半监督的学习方法</strong>：这一类方法利用标注的小数据集（种子数据）<code>自举学习</code>。</p>
+<p><strong>无监督的学习方法</strong>：这一类方法利用词汇资源（如WordNet）等进行上下文聚类。</p>
+<p><strong>混合方法</strong>：几种模型相结合或利用统计方法和人工总结的知识库。</p>
+<p>值得一提的是，由于深度学习在自然语言的广泛应用，基于深度学习的命名实体识别方法也展现出不错的效果，此类方法基本还是把命名实体识别<code>当做序列标注任务</code>来做，比较经典的方法是LSTM+CRF、BiLSTM+CRF。</p>
+<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><img src="./1564539204383.png" alt="Alt text"></p>
+<h3 id="4-工具包"><a href="#4-工具包" class="headerlink" title="4. 工具包"></a>4. 工具包</h3><p><img src="./1564539148720.png" alt="Alt text"></p>
+<h3 id="5-实战应用"><a href="#5-实战应用" class="headerlink" title="5. 实战应用"></a>5. 实战应用</h3><h4 id="5-1-使用预训练模型"><a href="#5-1-使用预训练模型" class="headerlink" title="5.1 使用预训练模型"></a>5.1 使用预训练模型</h4><p>很多工具包有提供已经训练好的NER模型，可以直接使用。</p>
+<h4 id="5-2-训练自己的NER模型"><a href="#5-2-训练自己的NER模型" class="headerlink" title="5.2 训练自己的NER模型"></a>5.2 训练自己的NER模型</h4><h5 id="5-2-1-有监督的学习方法"><a href="#5-2-1-有监督的学习方法" class="headerlink" title="5.2.1 有监督的学习方法"></a>5.2.1 有监督的学习方法</h5><p><strong>1）语料准备</strong><br>可以查找公开的数据集，或者自己人工标记语料，人工标记流程如下：</p>
+<ol>
+<li><p>定义实体类别，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">time: 时间</span><br><span class="line">location: 地点</span><br><span class="line">person_name: 人名</span><br><span class="line">org_name: 组织名</span><br><span class="line">company_name: 公司名</span><br><span class="line">product_name: 产品名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>收集语料</p>
+</li>
+<li><p>人工标记实体</p>
+</li>
+</ol>
+<p><strong>2）数据增强（Optional）</strong><br>对原语料进行分句，然后随机地对各个句子进行bigram、trigram拼接，最后与原始句子一起作为训练语料。</p>
+<p><strong>3）模型训练</strong></p>
+<ol>
+<li>传统机器学习：隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等，推荐条件随机场。</li>
+<li>深度学习：BiLSTM-CRF、IDCNN-CRF</li>
+</ol>
+<h5 id="5-2-2-半监督的学习方法"><a href="#5-2-2-半监督的学习方法" class="headerlink" title="5.2.2 半监督的学习方法"></a>5.2.2 半监督的学习方法</h5><h5 id="5-2-3-无监督的学习方法"><a href="#5-2-3-无监督的学习方法" class="headerlink" title="5.2.3 无监督的学习方法"></a>5.2.3 无监督的学习方法</h5><h3 id="6-Reference"><a href="#6-Reference" class="headerlink" title="6. Reference"></a>6. Reference</h3><ol>
+<li><a href="https://easyai.tech/ai-definition/ner/" target="_blank" rel="noopener">命名实体识别 – Named-entity recognition | NER</a> <em>NER整体框架概括比较全面</em></li>
+<li><a href="https://www.jiqizhixin.com/articles/2018-08-31-2" target="_blank" rel="noopener">一文详解深度学习在命名实体识别(NER)中的应用</a> <em>深度学习算法讲的细致</em></li>
+<li><a href="https://blog.csdn.net/buppt/article/details/81180361" target="_blank" rel="noopener">零基础入门–中文命名实体识别（BiLSTM+CRF模型，含代码）</a><em>BiLSTM+CRF模型的落地代码</em></li>
+<li><a href="https://www.jianshu.com/p/16e1f6a7aaef" target="_blank" rel="noopener">NLP入门（四）命名实体识别（NER）</a><em>NLTK和Stanford NLP工具包使用</em></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/31/entites-relationship-extract/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大雁">
+      <meta itemprop="description" content="机器学习、深度学习、Python、自然语言处理、计算机视觉">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大雁">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/07/31/entites-relationship-extract/" class="post-title-link" itemprop="url">实体关系抽取</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-31 20:26:12 / 修改时间：21:12:04" itemprop="dateCreated datePublished" datetime="2019-07-31T20:26:12+08:00">2019-07-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nlp/" itemprop="url" rel="index"><span itemprop="name">nlp</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/nlp/ml/" itemprop="url" rel="index"><span itemprop="name">ml</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">1.8k</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">2 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>信息抽取旨在从大规模非结构或半结构的自然语言文本中<code>抽取结构化信息</code>。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。</p>
+<h3 id="2-关系抽取方法"><a href="#2-关系抽取方法" class="headerlink" title="2. 关系抽取方法"></a>2. 关系抽取方法</h3><h4 id="2-1-基于规则匹配"><a href="#2-1-基于规则匹配" class="headerlink" title="2.1 基于规则匹配"></a>2.1 基于规则匹配</h4><p>比如，对于<code>IS-A</code>这样的关系，我们可以使用如下的规则进行抽取：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">“Y such as X ((, X)* (, and|or) X)”!</span><br><span class="line">“such Y as X”!</span><br><span class="line">“X or other Y”!</span><br><span class="line">“X and other Y”!</span><br><span class="line">“Y including X”!</span><br><span class="line">“Y, especially X”!</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-基于监督学习的方法"><a href="#2-2-基于监督学习的方法" class="headerlink" title="2.2 基于监督学习的方法"></a>2.2 基于监督学习的方法</h4><p>我们可以把关系抽取当成一个<code>多分类问题</code>，每一种关系都是一个类别，通过对标签数据的学习训练出一个分类器（classifier）即可。</p>
+<p><strong>流程</strong>：</p>
+<ul>
+<li>预先定义好想提取的关系集合</li>
+<li>选择相关的命名实体集合</li>
+<li>寻找并<code>标注数据</code></li>
+<li>选择有代表性的语料库</li>
+<li>标记命名实体</li>
+<li><code>人工标注实体间的关系</code></li>
+<li>分成训练、开发、测试集</li>
+<li>设计特征</li>
+<li>选择并训练分类器</li>
+<li>评估结果</li>
+</ul>
+<p>为了提高 efficiency，通常我们会训练<code>两个分类器</code>，第一个分类器是 yes/no 的二分类，判断命名实体间是否有关系，如果有关系，再送到第二个分类器，给实体分配关系类别。这样做的好处是通过排除大多数的实体对来加快分类器的训练过程，另一方面，对每个任务可以使用 task-specific feature-set。</p>
+<p><strong>要解决的难点</strong>：<br>1）特征构建<br>传统的基于机器学习的方法会使用一些NLP技术构建<code>组合特征</code>，比如词性标注，依存分析等。<br>2）标签数据的获取<br>监督学习的效果直接取决于训练数据集的大小和质量，但是获得大量的标注数据的代价是非常昂贵的。那么如何解决这个问题呢？我们可以<code>通过远程监督学习</code>（distant supervision）的方法，从已有信息里得到大量的标签数据。</p>
+<h4 id="2-3-基于半监督的方法"><a href="#2-3-基于半监督的方法" class="headerlink" title="2.3 基于半监督的方法"></a>2.3 基于半监督的方法</h4><p>1）基于种子的启发式算法（Bootstrapping）<br><strong>基本的思路</strong>：</p>
+<ol>
+<li>我们先准备一些准确率很高的<code>实体-关系种子集</code>，比如：Jack Ma/Alibaba/Founder-of这种</li>
+<li>以这些种子实例为基础，去语料库里找出所有相关的句子</li>
+<li>对这些句子的上下文进行分析，找出一些可靠的pattern</li>
+<li>然后再通过这些pattern去发现更多的实例</li>
+<li>通过新的实例再去发掘出新的pattern，如此往复，直到收敛<br>整个过程像滚雪球一样，越滚越大…</li>
+</ol>
+<p>2）🌟<code>远程监督学习</code>（Distant Supervision）</p>
+<p>通过远程监督学习获取了大量的标签数据之后，使用传统机器学习的方法进行训练分类器。</p>
+<p><strong>一个假设前提</strong>：<br>如果两个实体存在关联关系，那么语料库中涉及到这两个实体的地方，都将指向这样的关系。</p>
+<p><strong>存在的问题</strong>：</p>
+<ol>
+<li>假设前提的前提可能不成立；</li>
+<li>基于手动的特征工程效率不高；</li>
+</ol>
+<p><strong>改进</strong>：<br>现在取得state-of-the-art效果的方法基本都是基于远程监督学习的，而且他们的工作都是为了解决以上两个问题。</p>
+<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><strong>英文</strong></p>
+<ol>
+<li>ACE 2005: 599 docs. 7 types;</li>
+<li>SemiEval 2010 Task8 Dataset:</li>
+<li>NYT+FreeBase 通过Distant Supervised method 提取，里面会有噪音数据</li>
+<li>fewrel基于Wiki的数据集，<a href="https://thunlp.github.io/fewrel.html" target="_blank" rel="noopener">https://thunlp.github.io/fewrel.html</a></li>
+</ol>
+<p><strong>中文</strong></p>
+<ol>
+<li>open_data.zip (519.1 MB)<br><a href="https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q</a><br>密码：8gd2</li>
+<li><a href="https://www.biendata.com/competition/ccks_2019_ipre/" target="_blank" rel="noopener">https://www.biendata.com/competition/ccks_2019_ipre/</a><br>CCKS2019的一项比赛，人物关系抽取，给了数据集</li>
+</ol>
+<h3 id="4-算法模型"><a href="#4-算法模型" class="headerlink" title="4. 算法模型"></a>4. 算法模型</h3><h4 id="4-1-基于监督算法"><a href="#4-1-基于监督算法" class="headerlink" title="4.1 基于监督算法"></a>4.1 基于监督算法</h4><p>1）<strong>模型</strong>：<br>BiLSTM+attention模型<br>2）<strong>特征</strong>：<br>词向量+位置向量</p>
+<h3 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5 Reference"></a>5 Reference</h3><ol>
+<li><a href="http://www.shuang0420.com/2018/09/15/%E7%9F%A5%E8%AF%86%E6%8A%BD%E5%8F%96-%E5%AE%9E%E4%BD%93%E5%8F%8A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" target="_blank" rel="noopener">知识抽取-实体及关系抽取</a><em>（实体识别和关系抽取的概述和算法都涉及，推荐）</em></li>
+<li><a href="https://blog.csdn.net/buppt/article/details/82961979" target="_blank" rel="noopener">零基础入门–中文实体关系抽取（BiLSTM+attention，含代码）</a><em>（有监督抽取关系，代码）</em></li>
+<li><a href="https://shomy.top/2018/02/28/relation-extraction/#fully-supervised-learning" target="_blank" rel="noopener">关系抽取(分类)总结</a><em>（深度学习在关系抽取的算法介绍）</em></li>
+<li><a href="http://www.fanyeong.com/2018/08/11/relation-extration-overview/" target="_blank" rel="noopener">关系抽取综述</a><em>（综述，深度学习部分算法涉及）</em></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">大雁</p>
+  <div class="site-description motion-element" itemprop="description">机器学习、深度学习、Python、自然语言处理、计算机视觉</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
         </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/tags" 
-                    title="Tags">
-                    Tags
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/categories" 
-                    title="Categories">
-                    Categories
-                </a>
-            
-        </div>
-    </nav>
-
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">大雁的博客</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">机器学习、深度学习、Python、自然语言处理、计算机视觉</p>
-        </div>
-    </div>
-
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa fa-magic"></i>
-    </div>
-</div>
-
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            
-                <a href="/2019/07/31/sequence-mark/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2019-07-31</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/自然语言处理/'; return false;">#自然语言处理</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/序列标注任务/'; return false;">#序列标注任务</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">序列标注任务<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2019/07/31/NER/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2019-07-31</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/自然语言处理/'; return false;">#自然语言处理</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/命名实体识别/'; return false;">#命名实体识别</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">命名实体识别(NER)<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2019/07/31/entites-relationship-extract/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2019-07-31</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/自然语言处理/'; return false;">#自然语言处理</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/机器学习/'; return false;">#机器学习</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">实体关系抽取<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
+      </div>
     
-</div>
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
 
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @大雁. All right reserved
-            </div>
+
         </div>
-    </div>
+      </div>
 
-<!-- After Footer -->
-<!-- Disqus Comments -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大雁</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">3k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  <script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+  
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+
+  
+
+  <script src="/js/next-boot.js?v=7.3.0"></script>
+
+  
+
+  
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 </body>
-
 </html>
