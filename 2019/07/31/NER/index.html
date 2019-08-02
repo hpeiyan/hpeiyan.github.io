@@ -100,20 +100,20 @@
 
 
 
-  <meta name="description" content="1. 概述信息抽取旨在从大规模非结构或半结构的自然语言文本中抽取结构化信息。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。 2. 关系抽取方法2.1 基于规则匹配比如，对于IS-A这样的关系，我们可以使用如下的规则进行抽取： 123456“Y such as X ((, X)* (, and|or) X)”!“such Y as X”!“X or other">
-<meta name="keywords" content="自然语言处理,机器学习">
+  <meta name="description" content="1. 概念命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。 2. 实现  有监督的学习方法：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决">
+<meta name="keywords" content="自然语言处理,命名实体识别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实体关系抽取">
-<meta property="og:url" content="https://huangpeiyan.github.io/entites-relationship-extract.html">
+<meta property="og:title" content="命名实体识别(NER)">
+<meta property="og:url" content="https://huangpeiyan.github.io/2019/07/31/NER/index.html">
 <meta property="og:site_name" content="宁静致远">
-<meta property="og:description" content="1. 概述信息抽取旨在从大规模非结构或半结构的自然语言文本中抽取结构化信息。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。 2. 关系抽取方法2.1 基于规则匹配比如，对于IS-A这样的关系，我们可以使用如下的规则进行抽取： 123456“Y such as X ((, X)* (, and|or) X)”!“such Y as X”!“X or other">
+<meta property="og:description" content="1. 概念命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。 2. 实现  有监督的学习方法：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://huangpeiyan.github.io/images/1.jpg">
-<meta property="og:updated_time" content="2019-08-01T07:35:44.010Z">
+<meta property="og:image" content="https://huangpeiyan.github.io/images/default.jpg">
+<meta property="og:updated_time" content="2019-08-01T07:42:22.173Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实体关系抽取">
-<meta name="twitter:description" content="1. 概述信息抽取旨在从大规模非结构或半结构的自然语言文本中抽取结构化信息。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。 2. 关系抽取方法2.1 基于规则匹配比如，对于IS-A这样的关系，我们可以使用如下的规则进行抽取： 123456“Y such as X ((, X)* (, and|or) X)”!“such Y as X”!“X or other">
-<meta name="twitter:image" content="https://huangpeiyan.github.io/images/1.jpg">
+<meta name="twitter:title" content="命名实体识别(NER)">
+<meta name="twitter:description" content="1. 概念命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。 2. 实现  有监督的学习方法：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决">
+<meta name="twitter:image" content="https://huangpeiyan.github.io/images/default.jpg">
 
 
 
@@ -121,7 +121,7 @@
 
   
   
-  <link rel="canonical" href="https://huangpeiyan.github.io/entites-relationship-extract">
+  <link rel="canonical" href="https://huangpeiyan.github.io/2019/07/31/NER/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>实体关系抽取 | 宁静致远</title>
+  <title>命名实体识别(NER) | 宁静致远</title>
   
 
 
@@ -330,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huangpeiyan.github.io/entites-relationship-extract.html">
+    <link itemprop="mainEntityOfPage" href="https://huangpeiyan.github.io/2019/07/31/NER/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大雁">
@@ -347,7 +347,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">实体关系抽取
+          <h2 class="post-title" itemprop="name headline">命名实体识别(NER)
 
               
             
@@ -373,7 +373,7 @@
                 
               
 
-              <time title="创建时间：2019-07-31 20:26:12" itemprop="dateCreated datePublished" datetime="2019-07-31T20:26:12+08:00">2019-07-31</time>
+              <time title="创建时间：2019-07-31 21:23:10" itemprop="dateCreated datePublished" datetime="2019-07-31T21:23:10+08:00">2019-07-31</time>
             
 
             
@@ -390,7 +390,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-01 15:35:44" itemprop="dateModified" datetime="2019-08-01T15:35:44+08:00">2019-08-01</time>
+                <time title="修改时间：2019-08-01 15:42:22" itemprop="dateModified" datetime="2019-08-01T15:42:22+08:00">2019-08-01</time>
               
             
           </span>
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.8k</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">1 分钟</span>
               
             </div>
           
@@ -479,7 +479,7 @@
           
           
             <div class="post-gallery-row">
-              <img src="/images/1.jpg" itemprop="contentUrl">
+              <img src="/images/default.jpg" itemprop="contentUrl">
             
           
 
@@ -489,61 +489,38 @@
       
 
       
-        <h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>信息抽取旨在从大规模非结构或半结构的自然语言文本中<code>抽取结构化信息</code>。关系抽取是其中的重要子任务之一，主要目的是从文本中识别实体并抽取实体之间的语义关系。</p>
-<h3 id="2-关系抽取方法"><a href="#2-关系抽取方法" class="headerlink" title="2. 关系抽取方法"></a>2. 关系抽取方法</h3><h4 id="2-1-基于规则匹配"><a href="#2-1-基于规则匹配" class="headerlink" title="2.1 基于规则匹配"></a>2.1 基于规则匹配</h4><p>比如，对于<code>IS-A</code>这样的关系，我们可以使用如下的规则进行抽取：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">“Y such as X ((, X)* (, and|or) X)”!</span><br><span class="line">“such Y as X”!</span><br><span class="line">“X or other Y”!</span><br><span class="line">“X and other Y”!</span><br><span class="line">“Y including X”!</span><br><span class="line">“Y, especially X”!</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2-基于监督学习的方法"><a href="#2-2-基于监督学习的方法" class="headerlink" title="2.2 基于监督学习的方法"></a>2.2 基于监督学习的方法</h4><p>我们可以把关系抽取当成一个<code>多分类问题</code>，每一种关系都是一个类别，通过对标签数据的学习训练出一个分类器（classifier）即可。</p>
-<p><strong>流程</strong>：</p>
-<ul>
-<li>预先定义好想提取的关系集合</li>
-<li>选择相关的命名实体集合</li>
-<li>寻找并<code>标注数据</code></li>
-<li>选择有代表性的语料库</li>
-<li>标记命名实体</li>
-<li><code>人工标注实体间的关系</code></li>
-<li>分成训练、开发、测试集</li>
-<li>设计特征</li>
-<li>选择并训练分类器</li>
-<li>评估结果</li>
-</ul>
-<p>为了提高 efficiency，通常我们会训练<code>两个分类器</code>，第一个分类器是 yes/no 的二分类，判断命名实体间是否有关系，如果有关系，再送到第二个分类器，给实体分配关系类别。这样做的好处是通过排除大多数的实体对来加快分类器的训练过程，另一方面，对每个任务可以使用 task-specific feature-set。</p>
-<p><strong>要解决的难点</strong>：<br>1）特征构建<br>传统的基于机器学习的方法会使用一些NLP技术构建<code>组合特征</code>，比如词性标注，依存分析等。<br>2）标签数据的获取<br>监督学习的效果直接取决于训练数据集的大小和质量，但是获得大量的标注数据的代价是非常昂贵的。那么如何解决这个问题呢？我们可以<code>通过远程监督学习</code>（distant supervision）的方法，从已有信息里得到大量的标签数据。</p>
-<h4 id="2-3-基于半监督的方法"><a href="#2-3-基于半监督的方法" class="headerlink" title="2.3 基于半监督的方法"></a>2.3 基于半监督的方法</h4><p>1）基于种子的启发式算法（Bootstrapping）<br><strong>基本的思路</strong>：</p>
+        <h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p>命名实体识别（Named Entity Recognition，简称NER），又称作“专名识别”，是指识别文本中具有特定意义的实体，主要包括人名、地名、机构名、专有名词等。简单的讲，就是识别自然文本中的实体指称的边界和类别。</p>
+<h3 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h3><p><img src="1.png" alt="Alt text"></p>
+<p><img src="2.png" alt="Alt text"></p>
+<p><strong>有监督的学习方法</strong>：这一类方法需要利用大规模的已标注语料对模型进行参数训练。目前常用的模型或方法包括隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等。值得一提的是，<code>基于条件随机场</code>的方法是命名实体识别中最成功的方法。</p>
+<p><strong>半监督的学习方法</strong>：这一类方法利用标注的小数据集（种子数据）<code>自举学习</code>。</p>
+<p><strong>无监督的学习方法</strong>：这一类方法利用词汇资源（如WordNet）等进行上下文聚类。</p>
+<p><strong>混合方法</strong>：几种模型相结合或利用统计方法和人工总结的知识库。</p>
+<p>值得一提的是，由于深度学习在自然语言的广泛应用，基于深度学习的命名实体识别方法也展现出不错的效果，此类方法基本还是把命名实体识别<code>当做序列标注任务</code>来做，比较经典的方法是LSTM+CRF、BiLSTM+CRF。</p>
+<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><img src="3.png" alt="Alt text"></p>
+<h3 id="4-工具包"><a href="#4-工具包" class="headerlink" title="4. 工具包"></a>4. 工具包</h3><p><img src="4.png" alt="Alt text"></p>
+<h3 id="5-实战应用"><a href="#5-实战应用" class="headerlink" title="5. 实战应用"></a>5. 实战应用</h3><h4 id="5-1-使用预训练模型"><a href="#5-1-使用预训练模型" class="headerlink" title="5.1 使用预训练模型"></a>5.1 使用预训练模型</h4><p>很多工具包有提供已经训练好的NER模型，可以直接使用。</p>
+<h4 id="5-2-训练自己的NER模型"><a href="#5-2-训练自己的NER模型" class="headerlink" title="5.2 训练自己的NER模型"></a>5.2 训练自己的NER模型</h4><h5 id="5-2-1-有监督的学习方法"><a href="#5-2-1-有监督的学习方法" class="headerlink" title="5.2.1 有监督的学习方法"></a>5.2.1 有监督的学习方法</h5><p><strong>1）语料准备</strong><br>可以查找公开的数据集，或者自己人工标记语料，人工标记流程如下：</p>
 <ol>
-<li>我们先准备一些准确率很高的<code>实体-关系种子集</code>，比如：Jack Ma/Alibaba/Founder-of这种</li>
-<li>以这些种子实例为基础，去语料库里找出所有相关的句子</li>
-<li>对这些句子的上下文进行分析，找出一些可靠的pattern</li>
-<li>然后再通过这些pattern去发现更多的实例</li>
-<li>通过新的实例再去发掘出新的pattern，如此往复，直到收敛<br>整个过程像滚雪球一样，越滚越大…</li>
+<li><p>定义实体类别，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">time: 时间</span><br><span class="line">location: 地点</span><br><span class="line">person_name: 人名</span><br><span class="line">org_name: 组织名</span><br><span class="line">company_name: 公司名</span><br><span class="line">product_name: 产品名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>收集语料</p>
+</li>
+<li><p>人工标记实体</p>
+</li>
 </ol>
-<p>2）🌟<code>远程监督学习</code>（Distant Supervision）</p>
-<p>通过远程监督学习获取了大量的标签数据之后，使用传统机器学习的方法进行训练分类器。</p>
-<p><strong>一个假设前提</strong>：<br>如果两个实体存在关联关系，那么语料库中涉及到这两个实体的地方，都将指向这样的关系。</p>
-<p><strong>存在的问题</strong>：</p>
+<p><strong>2）数据增强（Optional）</strong><br>对原语料进行分句，然后随机地对各个句子进行bigram、trigram拼接，最后与原始句子一起作为训练语料。</p>
+<p><strong>3）模型训练</strong></p>
 <ol>
-<li>假设前提的前提可能不成立；</li>
-<li>基于手动的特征工程效率不高；</li>
+<li>传统机器学习：隐马尔可夫模型、语言模型、最大熵模型、支持向量机、决策树和条件随机场等，推荐条件随机场。</li>
+<li>深度学习：BiLSTM-CRF、IDCNN-CRF</li>
 </ol>
-<p><strong>改进</strong>：<br>现在取得state-of-the-art效果的方法基本都是基于远程监督学习的，而且他们的工作都是为了解决以上两个问题。</p>
-<h3 id="3-数据集"><a href="#3-数据集" class="headerlink" title="3. 数据集"></a>3. 数据集</h3><p><strong>英文</strong></p>
-<ol>
-<li>ACE 2005: 599 docs. 7 types;</li>
-<li>SemiEval 2010 Task8 Dataset:</li>
-<li>NYT+FreeBase 通过Distant Supervised method 提取，里面会有噪音数据</li>
-<li>fewrel基于Wiki的数据集，<a href="https://thunlp.github.io/fewrel.html" target="_blank" rel="noopener">https://thunlp.github.io/fewrel.html</a></li>
-</ol>
-<p><strong>中文</strong></p>
-<ol>
-<li>open_data.zip (519.1 MB)<br><a href="https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1gtq3FEMx4_eAFmZqyn844Q</a><br>密码：8gd2</li>
-<li><a href="https://www.biendata.com/competition/ccks_2019_ipre/" target="_blank" rel="noopener">https://www.biendata.com/competition/ccks_2019_ipre/</a><br>CCKS2019的一项比赛，人物关系抽取，给了数据集</li>
-</ol>
-<h3 id="4-算法模型"><a href="#4-算法模型" class="headerlink" title="4. 算法模型"></a>4. 算法模型</h3><h4 id="4-1-基于监督算法"><a href="#4-1-基于监督算法" class="headerlink" title="4.1 基于监督算法"></a>4.1 基于监督算法</h4><p>1）<strong>模型</strong>：<br>BiLSTM+attention模型<br>2）<strong>特征</strong>：<br>词向量+位置向量</p>
-<h3 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5 Reference"></a>5 Reference</h3><ol>
-<li><a href="http://www.shuang0420.com/2018/09/15/%E7%9F%A5%E8%AF%86%E6%8A%BD%E5%8F%96-%E5%AE%9E%E4%BD%93%E5%8F%8A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" target="_blank" rel="noopener">知识抽取-实体及关系抽取</a><em>（实体识别和关系抽取的概述和算法都涉及，推荐）</em></li>
-<li><a href="https://blog.csdn.net/buppt/article/details/82961979" target="_blank" rel="noopener">零基础入门–中文实体关系抽取（BiLSTM+attention，含代码）</a><em>（有监督抽取关系，代码）</em></li>
-<li><a href="https://shomy.top/2018/02/28/relation-extraction/#fully-supervised-learning" target="_blank" rel="noopener">关系抽取(分类)总结</a><em>（深度学习在关系抽取的算法介绍）</em></li>
-<li><a href="http://www.fanyeong.com/2018/08/11/relation-extration-overview/" target="_blank" rel="noopener">关系抽取综述</a><em>（综述，深度学习部分算法涉及）</em></li>
+<h5 id="5-2-2-半监督的学习方法"><a href="#5-2-2-半监督的学习方法" class="headerlink" title="5.2.2 半监督的学习方法"></a>5.2.2 半监督的学习方法</h5><h5 id="5-2-3-无监督的学习方法"><a href="#5-2-3-无监督的学习方法" class="headerlink" title="5.2.3 无监督的学习方法"></a>5.2.3 无监督的学习方法</h5><h3 id="6-Reference"><a href="#6-Reference" class="headerlink" title="6. Reference"></a>6. Reference</h3><ol>
+<li><a href="https://easyai.tech/ai-definition/ner/" target="_blank" rel="noopener">命名实体识别 – Named-entity recognition | NER</a> <em>NER整体框架概括比较全面</em></li>
+<li><a href="https://www.jiqizhixin.com/articles/2018-08-31-2" target="_blank" rel="noopener">一文详解深度学习在命名实体识别(NER)中的应用</a> <em>深度学习算法讲的细致</em></li>
+<li><a href="https://blog.csdn.net/buppt/article/details/81180361" target="_blank" rel="noopener">零基础入门–中文命名实体识别（BiLSTM+CRF模型，含代码）</a><em>BiLSTM+CRF模型的落地代码</em></li>
+<li><a href="https://www.jianshu.com/p/16e1f6a7aaef" target="_blank" rel="noopener">NLP入门（四）命名实体识别（NER）</a><em>NLTK和Stanford NLP工具包使用</em></li>
 </ol>
 
       
@@ -570,7 +547,7 @@
           
             <a href="/tags/自然语言处理/" rel="tag"># 自然语言处理</a>
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+            <a href="/tags/命名实体识别/" rel="tag"># 命名实体识别</a>
           
         </div>
       
@@ -583,14 +560,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/07/31/entites-relationship-extract/" rel="next" title="实体关系抽取">
+                <i class="fa fa-chevron-left"></i> 实体关系抽取
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/NER.html" rel="prev" title="命名实体识别(NER)">
-                命名实体识别(NER) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/31/sequence-mark/" rel="prev" title="序列标注任务">
+                序列标注任务 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -757,7 +738,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概述"><span class="nav-number">1.</span> <span class="nav-text">1. 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-关系抽取方法"><span class="nav-number">2.</span> <span class="nav-text">2. 关系抽取方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-基于规则匹配"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 基于规则匹配</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-基于监督学习的方法"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 基于监督学习的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-基于半监督的方法"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 基于半监督的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据集"><span class="nav-number">3.</span> <span class="nav-text">3. 数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-算法模型"><span class="nav-number">4.</span> <span class="nav-text">4. 算法模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-基于监督算法"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 基于监督算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Reference"><span class="nav-number">5.</span> <span class="nav-text">5 Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">1.</span> <span class="nav-text">1. 概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-实现"><span class="nav-number">2.</span> <span class="nav-text">2. 实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-数据集"><span class="nav-number">3.</span> <span class="nav-text">3. 数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-工具包"><span class="nav-number">4.</span> <span class="nav-text">4. 工具包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-实战应用"><span class="nav-number">5.</span> <span class="nav-text">5. 实战应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-使用预训练模型"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 使用预训练模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-训练自己的NER模型"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 训练自己的NER模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-1-有监督的学习方法"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 有监督的学习方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-2-半监督的学习方法"><span class="nav-number">5.2.2.</span> <span class="nav-text">5.2.2 半监督的学习方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-3-无监督的学习方法"><span class="nav-number">5.2.3.</span> <span class="nav-text">5.2.3 无监督的学习方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Reference"><span class="nav-number">6.</span> <span class="nav-text">6. Reference</span></a></li></ol></div>
             
 
           </div>
