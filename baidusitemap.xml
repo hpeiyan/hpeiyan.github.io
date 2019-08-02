@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://huangpeiyan.github.io/2019/07/31/sequence-mark/</loc>
+    <loc>https://huangpeiyan.github.io/sequence-mark.html</loc>
     <lastmod>2019-08-02</lastmod>
   </url>  <url>
-    <loc>https://huangpeiyan.github.io/2019/08/01/nltk-introduction/</loc>
+    <loc>https://huangpeiyan.github.io/nltk-introduction.html</loc>
     <lastmod>2019-08-02</lastmod>
   </url>  <url>
-    <loc>https://huangpeiyan.github.io/2019/07/31/NER/</loc>
+    <loc>https://huangpeiyan.github.io/NER.html</loc>
     <lastmod>2019-08-01</lastmod>
   </url>  <url>
-    <loc>https://huangpeiyan.github.io/2019/07/31/entites-relationship-extract/</loc>
+    <loc>https://huangpeiyan.github.io/entites-relationship-extract.html</loc>
     <lastmod>2019-08-01</lastmod>
   </url>
 </urlset>
