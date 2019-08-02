@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huangpeiyan.github.io/2019/07/31/sequence-mark/</loc>
+    
+    <lastmod>2019-08-02T01:24:16.801Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://huangpeiyan.github.io/2019/08/01/nltk-introduction/</loc>
     
-    <lastmod>2019-08-01T12:38:23.064Z</lastmod>
+    <lastmod>2019-08-02T01:24:08.800Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://huangpeiyan.github.io/2019/07/31/NER/</loc>
     
     <lastmod>2019-08-01T07:42:22.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://huangpeiyan.github.io/2019/07/31/sequence-mark/</loc>
-    
-    <lastmod>2019-08-01T07:35:53.288Z</lastmod>
     
   </url>
   
