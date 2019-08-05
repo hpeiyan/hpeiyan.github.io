@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hpeiyan.github.io/2019/07/31/sequence-mark/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://hpeiyan.github.io/2019/08/01/nltk-introduction/</loc>
-    <lastmod>2019-08-02</lastmod>
-  </url>  <url>
-    <loc>https://hpeiyan.github.io/2019/07/31/NER/</loc>
-    <lastmod>2019-08-01</lastmod>
+    <lastmod>2019-08-05</lastmod>
   </url>  <url>
     <loc>https://hpeiyan.github.io/2019/07/31/entites-relationship-extract/</loc>
-    <lastmod>2019-08-01</lastmod>
+    <lastmod>2019-08-05</lastmod>
+  </url>  <url>
+    <loc>https://hpeiyan.github.io/2019/08/01/nltk-introduction/</loc>
+    <lastmod>2019-08-05</lastmod>
+  </url>  <url>
+    <loc>https://hpeiyan.github.io/2019/07/31/NER/</loc>
+    <lastmod>2019-08-05</lastmod>
   </url>
 </urlset>
