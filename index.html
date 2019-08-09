@@ -428,6 +428,17 @@
 
           
           
+            <span id="/2019/08/01/nltk-introduction/" class="leancloud_visitors" data-flag-title="NLTK简述">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
 
@@ -633,6 +644,17 @@
           
 
           
+          
+            <span id="/2019/07/31/sequence-mark/" class="leancloud_visitors" data-flag-title="序列标注任务">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -872,6 +894,17 @@
 
           
           
+            <span id="/2019/07/31/NER/" class="leancloud_visitors" data-flag-title="命名实体识别(NER)">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
 
           
 
@@ -1104,6 +1137,17 @@
           
 
           
+          
+            <span id="/2019/07/31/entites-relationship-extract/" class="leancloud_visitors" data-flag-title="实体关系抽取">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
           
 
           
@@ -1369,6 +1413,8 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
+      <span class="post-meta-item-text">站点总字数：</span>
+    
     <span title="站点总字数">8k</span>
   
 
@@ -1377,6 +1423,8 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
     <span title="站点阅读时长">7 分钟</span>
   
@@ -1521,6 +1569,74 @@
 
 
   
+  
+  <script>
+    
+    function showTime(Counter) {
+      var entries = [];
+      var $visitors = $('.leancloud_visitors');
+
+      $visitors.each(function() {
+        entries.push( $(this).attr('id').trim() );
+      });
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+        .done(function({ results }) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.url;
+            var time = item.time;
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function ({ responseJSON }) {
+          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'kx0WcflFcCsLQ0yK1gsdeDpM-gzGzoHsz')
+        .done(function({ api_server }) {
+          var Counter = function(method, url, data) {
+            return $.ajax({
+              method: method,
+              url: 'https://' + api_server + '/1.1' + url,
+              headers: {
+                'X-LC-Id': 'kx0WcflFcCsLQ0yK1gsdeDpM-gzGzoHsz',
+                'X-LC-Key': 'UD6dRx7Ps1ye5U1UerF80bI2',
+                'Content-Type': 'application/json',
+              },
+              data: data
+            });
+          };
+          
+            if ($('.post-title-link').length >= 1) {
+              showTime(Counter);
+            }
+          
+        });
+    });
+  </script>
+
+
 
   
 
