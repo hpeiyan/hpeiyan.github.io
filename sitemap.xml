@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hpeiyan.github.io/2019/08/21/keras-ner-tutorial/</loc>
+    
+    <lastmod>2019-08-21T13:03:49.569Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hpeiyan.github.io/2019/08/11/bc-liangqichao/</loc>
     
-    <lastmod>2019-08-11T14:25:37.134Z</lastmod>
+    <lastmod>2019-08-21T12:03:43.274Z</lastmod>
     
   </url>
   

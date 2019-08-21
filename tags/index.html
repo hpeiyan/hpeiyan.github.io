@@ -393,11 +393,19 @@
                   
                 
               
-              目前共计 8 个标签
+                
+                  
+                
+              
+                
+                  
+                
+              
+              目前共计 10 个标签
             </div>
             <div class="tag-cloud-tags">
               
-                <a href="/tags/NLTK/" style="font-size: 12px; color: #ccc">NLTK</a> <a href="/tags/nlp/" style="font-size: 12px; color: #ccc">nlp</a> <a href="/tags/命名实体识别/" style="font-size: 12px; color: #ccc">命名实体识别</a> <a href="/tags/家书/" style="font-size: 12px; color: #ccc">家书</a> <a href="/tags/序列标注任务/" style="font-size: 12px; color: #ccc">序列标注任务</a> <a href="/tags/机器学习/" style="font-size: 12px; color: #ccc">机器学习</a> <a href="/tags/梁启超/" style="font-size: 12px; color: #ccc">梁启超</a> <a href="/tags/自然语言处理/" style="font-size: 30px; color: #111">自然语言处理</a>
+                <a href="/tags/NLTK/" style="font-size: 12px; color: #ccc">NLTK</a> <a href="/tags/ml/" style="font-size: 12px; color: #ccc">ml</a> <a href="/tags/ner/" style="font-size: 12px; color: #ccc">ner</a> <a href="/tags/nlp/" style="font-size: 12px; color: #ccc">nlp</a> <a href="/tags/命名实体识别/" style="font-size: 12px; color: #ccc">命名实体识别</a> <a href="/tags/家书/" style="font-size: 12px; color: #ccc">家书</a> <a href="/tags/序列标注任务/" style="font-size: 12px; color: #ccc">序列标注任务</a> <a href="/tags/机器学习/" style="font-size: 12px; color: #ccc">机器学习</a> <a href="/tags/梁启超/" style="font-size: 12px; color: #ccc">梁启超</a> <a href="/tags/自然语言处理/" style="font-size: 30px; color: #111">自然语言处理</a>
               
             </div>
           </div>
@@ -456,7 +464,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -479,7 +487,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -512,7 +524,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -568,7 +584,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">16k</span>
   
 
   
@@ -579,7 +595,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   
 </div>
 
@@ -726,74 +742,6 @@
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
-
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'kx0WcflFcCsLQ0yK1gsdeDpM-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'kx0WcflFcCsLQ0yK1gsdeDpM-gzGzoHsz',
-                'X-LC-Key': 'UD6dRx7Ps1ye5U1UerF80bI2',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
-    });
-  </script>
-
-
 
   
 
