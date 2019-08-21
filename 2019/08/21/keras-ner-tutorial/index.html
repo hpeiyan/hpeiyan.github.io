@@ -108,12 +108,12 @@
 <meta property="og:site_name" content="宁静致远">
 <meta property="og:description" content="概述在NLP的序列标注任务里面，NER是基础的上游任务，也就意味着，业界许多垂直领域的NLP项目，NER是绕不开的任务。今天的这篇博客，笔者不想涉及深入的算法和数学知识，仅就在代码实现层面，对有监督的NER训练，做一些介绍。对于NER一知半解的读者，可以移步笔者的另一篇博文——《命名实体识别概述》。 技能要求 Python 3 Keras框架 Log、Matplotlib、TensorFlow等辅">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hpeiyan.github.io/images/3.png">
-<meta property="og:updated_time" content="2019-08-21T13:03:49.569Z">
+<meta property="og:image" content="https://hpeiyan.github.io/images/2.png">
+<meta property="og:updated_time" content="2019-08-21T13:22:49.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于BiLstm+CRF的命名实体识别（NER）Keras实现">
 <meta name="twitter:description" content="概述在NLP的序列标注任务里面，NER是基础的上游任务，也就意味着，业界许多垂直领域的NLP项目，NER是绕不开的任务。今天的这篇博客，笔者不想涉及深入的算法和数学知识，仅就在代码实现层面，对有监督的NER训练，做一些介绍。对于NER一知半解的读者，可以移步笔者的另一篇博文——《命名实体识别概述》。 技能要求 Python 3 Keras框架 Log、Matplotlib、TensorFlow等辅">
-<meta name="twitter:image" content="https://hpeiyan.github.io/images/3.png">
+<meta name="twitter:image" content="https://hpeiyan.github.io/images/2.png">
 
 
 
@@ -373,7 +373,7 @@
                 
               
 
-              <time title="创建时间：2019-08-21 19:59:42 / 修改时间：21:03:49" itemprop="dateCreated datePublished" datetime="2019-08-21T19:59:42+08:00">2019-08-21</time>
+              <time title="创建时间：2019-08-21 19:59:42 / 修改时间：21:22:49" itemprop="dateCreated datePublished" datetime="2019-08-21T19:59:42+08:00">2019-08-21</time>
             
 
             
@@ -467,7 +467,7 @@
           
           
             <div class="post-gallery-row">
-              <img src="/images/3.png" itemprop="contentUrl">
+              <img src="/images/2.png" itemprop="contentUrl">
             
           
 
@@ -477,7 +477,7 @@
       
 
       
-        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在NLP的<a href="https://hpeiyan.github.io/2019/07/31/sequence-mark/">序列标注任务</a>里面，NER是基础的上游任务，也就意味着，业界许多垂直领域的NLP项目，NER是绕不开的任务。今天的这篇博客，笔者不想涉及深入的算法和数学知识，仅就在代码实现层面，对有监督的NER训练，做一些介绍。对于NER一知半解的读者，可以移步笔者的另一篇博文——《命名实体识别概述》。</p>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在NLP的<a href="https://hpeiyan.github.io/2019/07/31/sequence-mark/">序列标注任务</a>里面，NER是基础的上游任务，也就意味着，业界许多垂直领域的NLP项目，NER是绕不开的任务。今天的这篇博客，笔者不想涉及深入的算法和数学知识，仅就在代码实现层面，对有监督的NER训练，做一些介绍。对于NER一知半解的读者，可以移步笔者的另一篇博文——<a href="https://hpeiyan.github.io/2019/07/31/NER/">《命名实体识别概述》</a>。</p>
 <h3 id="技能要求"><a href="#技能要求" class="headerlink" title="技能要求"></a>技能要求</h3><ol>
 <li>Python 3</li>
 <li>Keras框架</li>
@@ -517,15 +517,14 @@
 <p>最主要的地方是利用了<code>Keras</code>的<code>Tokenizer</code>，对词汇进行唯一标识。</p>
 <h3 id="项目成果"><a href="#项目成果" class="headerlink" title="项目成果"></a>项目成果</h3><ol>
 <li><p>训练准确度：</p>
-<p><img src="acc.png" alt="Alt text"></p>
-<p><img src="loss.png" alt="Alt text"></p>
+<p><img src="acc.png" alt="准确度"><img src="loss.png" alt="损失值"></p>
 </li>
 <li><p>预测结果：</p>
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'进一步(o)'</span>, <span class="string">'研究(o)'</span>, <span class="string">'已经(o)'</span>, <span class="string">'发现(o)'</span>, <span class="string">'了(o)'</span>, <span class="string">'有关(o)'</span>, <span class="string">'这个(o)'</span>, <span class="string">'“(o)'</span>, <span class="string">'钥匙(o)'</span>, <span class="string">'”(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'功能(o)'</span>, <span class="string">'及其(o)'</span>, <span class="string">'薄弱环节(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'韩国(b-loc)'</span>, <span class="string">'已(o)'</span>, <span class="string">'开始(o)'</span>, <span class="string">'实施(o)'</span>, <span class="string">'初步(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'紧缩(o)'</span>, <span class="string">'政策(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'决定(o)'</span>, <span class="string">'把(o)'</span>, <span class="string">'1998(b-time)'</span>, <span class="string">'年(i-time)'</span>, <span class="string">'预算(o)'</span>, <span class="string">'削减(o)'</span>, <span class="string">'10(o)'</span>, <span class="string">'％(o)'</span>, <span class="string">'以上(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'并(o)'</span>, <span class="string">'拟定(o)'</span>, <span class="string">'出(o)'</span>, <span class="string">'金融(o)'</span>, <span class="string">'改革方案(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'取消(o)'</span>, <span class="string">'对(o)'</span>, <span class="string">'外汇(o)'</span>, <span class="string">'、(o)'</span>, <span class="string">'资本(o)'</span>, <span class="string">'流通(o)'</span>, <span class="string">'和(o)'</span>, <span class="string">'利率(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'所有(o)'</span>, <span class="string">'管制(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'逐步(o)'</span>, <span class="string">'允许(o)'</span>, <span class="string">'外国(o)'</span>, <span class="string">'金融机构(o)'</span>, <span class="string">'接管(o)'</span>, <span class="string">'和(o)'</span>, <span class="string">'收购(o)'</span>, <span class="string">'部分(o)'</span>, <span class="string">'韩国(b-loc)'</span>, <span class="string">'金融机构(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'甜(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'咸(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'干(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'稀(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'素(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'荤(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'应有尽有(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'让(o)'</span>, <span class="string">'我们(o)'</span>, <span class="string">'望而生畏(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'在(o)'</span>, <span class="string">'这种(o)'</span>, <span class="string">'心理(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'趋动(o)'</span>, <span class="string">'下(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'敢(o)'</span>, <span class="string">'冒风险(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'股民(o)'</span>, <span class="string">'越来越(o)'</span>, <span class="string">'多(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'当年(o)'</span>, <span class="string">'全县(o)'</span>, <span class="string">'上下(o)'</span>, <span class="string">'一盘棋(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'从(o)'</span>, <span class="string">'抓(o)'</span>, <span class="string">'计划生育(o)'</span>, <span class="string">'着眼(o)'</span>, <span class="string">'促进(o)'</span>, <span class="string">'经济(o)'</span>, <span class="string">'发展(o)'</span>, <span class="string">'入手(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'成效显著(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line"></span><br><span class="line">[<span class="string">'傅全有(b-per)'</span>, <span class="string">'说(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'领导(o)'</span>, <span class="string">'方法(o)'</span>, <span class="string">'“(o)'</span>, <span class="string">'十六(o)'</span>, <span class="string">'字(o)'</span>, <span class="string">'”(o)'</span>, <span class="string">'方针(o)'</span>, <span class="string">'，(o)'</span>, <span class="string">'是(o)'</span>, <span class="string">'新形势下(o)'</span>, <span class="string">'加强(o)'</span>, <span class="string">'党委(o)'</span>, <span class="string">'建设(o)'</span>, <span class="string">'的(o)'</span>, <span class="string">'根本(o)'</span>, <span class="string">'指导方针(o)'</span>, <span class="string">'。(o)'</span>]</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
 
-
+<h3 id="项目GitHub"><a href="#项目GitHub" class="headerlink" title="项目GitHub"></a><a href="https://github.com/hpeiyan/Keras-NER.git" target="_blank" rel="noopener">项目GitHub</a></h3>
       
     </div>
 
@@ -751,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技能要求"><span class="nav-number">2.</span> <span class="nav-text">技能要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目标"><span class="nav-number">3.</span> <span class="nav-text">项目目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目录"><span class="nav-number">4.</span> <span class="nav-text">项目目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">5.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集"><span class="nav-number">5.1.</span> <span class="nav-text">数据集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型搭建"><span class="nav-number">5.2.</span> <span class="nav-text">模型搭建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成数据"><span class="nav-number">5.3.</span> <span class="nav-text">生成数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目成果"><span class="nav-number">6.</span> <span class="nav-text">项目成果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#技能要求"><span class="nav-number">2.</span> <span class="nav-text">技能要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目标"><span class="nav-number">3.</span> <span class="nav-text">项目目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目录"><span class="nav-number">4.</span> <span class="nav-text">项目目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">5.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集"><span class="nav-number">5.1.</span> <span class="nav-text">数据集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型搭建"><span class="nav-number">5.2.</span> <span class="nav-text">模型搭建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成数据"><span class="nav-number">5.3.</span> <span class="nav-text">生成数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目成果"><span class="nav-number">6.</span> <span class="nav-text">项目成果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目GitHub"><span class="nav-number">7.</span> <span class="nav-text">项目GitHub</span></a></li></ol></div>
             
 
           </div>
